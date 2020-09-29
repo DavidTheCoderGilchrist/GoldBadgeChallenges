@@ -10,6 +10,7 @@ namespace Challengeone_Console
         private MenuContentRepository _itemRepo = new MenuContentRepository();
         public void Run()
         {
+            SeedMenuItemList();
             Menu();
         }
 
@@ -99,12 +100,37 @@ namespace Challengeone_Console
 
         private void DeleteMenuItem()
         {
-
+            
         }
 
         private void DisplayAllItems()
         {
+            Console.Clear();
 
+            List<MenuContent> listofItems = _itemRepo.GetItemsList();
+
+            foreach (MenuContent items in listofItems)
+            {
+                Console.WriteLine($"Meal Number: {items.MealNumber}\n" +
+                    $"Meal Name: {items.MealName}\n" +
+                    $"Description: {items.Description}\n" +
+                    $"List of Ingredients: {items.ListOfIngredients}\n" +
+                    $"Price: ${items.Price}");
+                Console.WriteLine();
+            }
+        }
+
+        //See method
+        private void SeedMenuItemList()
+        {
+            MenuContent komodoOmelette = new MenuContent(1, "Komodo Omelette", "A two egg omelette served with a your choice of a side", "Eggs, steak, mushrooms, and swiss cheese", 7.45);
+            MenuContent komodoChickenAndWaffles = new MenuContent(2, "Komodo Chicken and Waffles", "Pumpkin spice waffles and breaded chicken strips", "Waffles and chicken served with maple syrup", 9.50);
+            MenuContent komodoBreakfastBurrito = new MenuContent(3, "Komodo Breakfast Burrito", "A flour tortilla filled with two eggs, sausage, and mixed cheese served with a side", "Eggs, sausage, cheese, and choice of side", 10.50);
+
+            _itemRepo.AddItemsToList(komodoOmelette);            
+            _itemRepo.AddItemsToList(komodoChickenAndWaffles);            
+            _itemRepo.AddItemsToList(komodoBreakfastBurrito);
+            
         }
     }
 }
