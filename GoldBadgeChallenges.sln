@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeOne_Console", "GoldBadgeChallenges\ChallengeOne_Console.csproj", "{1B91147F-CD6F-4A99-8F3F-817EF9F7F50C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChallengeOne_Console", "GoldBadgeChallenges\ChallengeOne_Console.csproj", "{1B91147F-CD6F-4A99-8F3F-817EF9F7F50C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeOne_Tests", "ChallengeOne_Tests\ChallengeOne_Tests.csproj", "{79AC7751-EA9E-46D2-9849-CBDEF06BB3C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeOne_Repository", "ChallengeOne_Repository\ChallengeOne_Repository.csproj", "{10A77E96-3F57-4658-8823-C6F8C33488DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{1B91147F-CD6F-4A99-8F3F-817EF9F7F50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B91147F-CD6F-4A99-8F3F-817EF9F7F50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B91147F-CD6F-4A99-8F3F-817EF9F7F50C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79AC7751-EA9E-46D2-9849-CBDEF06BB3C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79AC7751-EA9E-46D2-9849-CBDEF06BB3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79AC7751-EA9E-46D2-9849-CBDEF06BB3C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79AC7751-EA9E-46D2-9849-CBDEF06BB3C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10A77E96-3F57-4658-8823-C6F8C33488DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10A77E96-3F57-4658-8823-C6F8C33488DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10A77E96-3F57-4658-8823-C6F8C33488DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10A77E96-3F57-4658-8823-C6F8C33488DD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Challengeone_Console;
+using System;
 
-namespace Challengeone_Console
+namespace ChallengeOne_Console
 {
     class Program
     {
+        static void Main(string[] args)
+        {
+            ProgramUI program = new ProgramUI();
+            program.Run();
+        }
     }
 }
