@@ -1,12 +1,6 @@
 ﻿using ChallengeFour_Repository;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel.Design;
-using System.Linq;
-using System.Runtime.Remoting.Channels;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ChallengeFour_Console
 {

@@ -1,12 +1,6 @@
 ﻿using ChallengeTwo_Repository;
-using Microsoft.VisualBasic;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.Design;
-using System.Runtime.CompilerServices;
-using System.Security.Claims;
-using System.Text;
+
 
 namespace ChallengeTwo_Console
 {
