@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Challengeone_Console
 {
-    class ProgramUI
+    public class ProgramUI
     {
         private MenuContentRepository _itemRepo = new MenuContentRepository();
         public void Run()
@@ -92,7 +92,7 @@ namespace Challengeone_Console
             Console.WriteLine("What is the price of the item?");        
             Console.Write("$");
             string itemPrice = Console.ReadLine();
-            newItem.Price = double.Parse(itemPrice);
+            newItem.Price = decimal.Parse(itemPrice);
             Console.Clear();
 
             _itemRepo.AddItemsToList(newItem);
@@ -100,7 +100,29 @@ namespace Challengeone_Console
 
         private void DeleteMenuItem()
         {
-            
+            DisplayAllItems();
+
+            //Get the meal number they want to delete
+            Console.WriteLine("Enter the meal name of the menu item you would like to remove");
+
+            string input = Console.ReadLine();
+
+            //Call the delete method
+            bool wasDeleted = _itemRepo.RemoveItemsFromList(input);
+
+            //If the content was deleted, say so   //Otherwise state it could not be deleted
+
+            if (wasDeleted)
+            {
+                Console.WriteLine("The content was successfullly deleted.");
+            }
+
+            else
+            {
+                Console.WriteLine("The content was not successfully deleted.  Please retry.");
+            }
+
+
         }
 
         private void DisplayAllItems()
@@ -115,17 +137,17 @@ namespace Challengeone_Console
                     $"Meal Name: {items.MealName}\n" +
                     $"Description: {items.Description}\n" +
                     $"List of Ingredients: {items.ListOfIngredients}\n" +
-                    $"Price: ${items.Price}");
+                    $"Price: {items.Price}");
                 Console.WriteLine();
             }
         }
 
-        //See method
+        //Seed method
         private void SeedMenuItemList()
         {
-            MenuContent komodoOmelette = new MenuContent(1, "Komodo Omelette", "A two egg omelette served with a your choice of a side", "Eggs, steak, mushrooms, and swiss cheese", 7.45);
-            MenuContent komodoChickenAndWaffles = new MenuContent(2, "Komodo Chicken and Waffles", "Pumpkin spice waffles and breaded chicken strips", "Waffles and chicken served with maple syrup", 9.50);
-            MenuContent komodoBreakfastBurrito = new MenuContent(3, "Komodo Breakfast Burrito", "A flour tortilla filled with two eggs, sausage, and mixed cheese served with a side", "Eggs, sausage, cheese, and choice of side", 10.50);
+            MenuContent komodoOmelette = new MenuContent(1, "Komodo Omelette", "A two egg omelette served with a your choice of a side", "Eggs, steak, mushrooms, and swiss cheese", 7.45m);
+            MenuContent komodoChickenAndWaffles = new MenuContent(2, "Komodo Chicken and Waffles", "Pumpkin spice waffles and breaded chicken strips", "Waffles and chicken served with maple syrup", 9.50m);
+            MenuContent komodoBreakfastBurrito = new MenuContent(3, "Komodo Breakfast Burrito", "A flour tortilla filled with two eggs, sausage, and mixed cheese served with a side", "Eggs, sausage, cheese, and choice of side", 10.50m);
 
             _itemRepo.AddItemsToList(komodoOmelette);            
             _itemRepo.AddItemsToList(komodoChickenAndWaffles);            

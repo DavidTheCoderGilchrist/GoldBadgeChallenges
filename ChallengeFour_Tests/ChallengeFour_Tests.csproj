@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{083F221B-4EFB-47CC-A142-83D6FC22B353}</ProjectGuid>
+    <ProjectGuid>{C65A82A5-2467-4146-8208-4E120C9DEF0E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChallengeOne_Tests</RootNamespace>
-    <AssemblyName>ChallengeOne_Tests</AssemblyName>
+    <RootNamespace>ChallengeFour_Tests</RootNamespace>
+    <AssemblyName>ChallengeFour_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,16 +49,20 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChallengeOneTest.cs" />
+    <Compile Include="ChallengeFourTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ChallengeOne_Repository\ChallengeOne_Repository.csproj">
-      <Project>{10a77e96-3f57-4658-8823-c6f8c33488dd}</Project>
-      <Name>ChallengeOne_Repository</Name>
+    <ProjectReference Include="..\ChallengeFour_Console\ChallengeFour_Console.csproj">
+      <Project>{5561a78e-5703-4152-b998-d2ecf55a545f}</Project>
+      <Name>ChallengeFour_Console</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChallengeFour_Repository\ChallengeFour_Repository.csproj">
+      <Project>{06be42f8-6674-4fcd-b768-6563f159fa72}</Project>
+      <Name>ChallengeFour_Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
